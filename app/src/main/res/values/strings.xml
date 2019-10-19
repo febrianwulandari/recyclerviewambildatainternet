@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MyAPI</string>
+    <string name="detail_pemain_arsenal">Detail Pemain Arsenal</string>
+    <string name="nama_pemain">Nama Pemain</string>
+    <string name="tempat_lahir">Tempat Lahir</string>
+    <string name="tgllahir">TglLahir</string>
+    <string name="nationality">Nationality</string>
+    <string name="deskripsi_pemain">Deskripsi Pemain</string>
 </resources>

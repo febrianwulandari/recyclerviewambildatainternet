@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nama"
-    android:layout_width="match_parent"
+<ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+`<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5EBEB"
     tools:context=".DetailActivity">
 
     <TextView
-        android:id="@+id/Nama"
+        android:id="@+id/judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -16,35 +20,36 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="Nama Pemain"
+        android:text="@string/detail_pemain_arsenal"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/gambardeatil"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Nama"
+        app:layout_constraintTop_toBottomOf="@+id/judul"
         tools:srcCompat="@tools:sample/avatars[12]" />
 
     <TextView
-        android:id="@+id/tglLahir"
+        android:id="@+id/nama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="Tanggal Lahir"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        android:text="@string/nama_pemain"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/gambardeatil"
+        app:layout_constraintTop_toTopOf="@+id/gambardeatil" />
 
     <TextView
         android:id="@+id/tmptLahir"
@@ -53,19 +58,19 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:text="Tempat Lahir"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/tglLahir" />
+        android:text="@string/tempat_lahir"
+        app:layout_constraintStart_toEndOf="@+id/gambardeatil"
+        app:layout_constraintTop_toBottomOf="@+id/nama" />
 
     <TextView
-        android:id="@+id/idPlayer"
+        android:id="@+id/TglLahir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:text="Id Player"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        android:text="@string/tgllahir"
+        app:layout_constraintStart_toEndOf="@+id/gambardeatil"
         app:layout_constraintTop_toBottomOf="@+id/tmptLahir" />
 
     <TextView
@@ -75,19 +80,25 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:text="Nationality"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/idPlayer" />
+        android:text="@string/nationality"
+        app:layout_constraintStart_toEndOf="@+id/gambardeatil"
+        app:layout_constraintTop_toBottomOf="@+id/TglLahir" />
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="379dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
-        android:text="Deskripsi Pemain"
-        android:textSize="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#D19292"
+        android:text="@string/deskripsi_pemain"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/gambardeatil" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

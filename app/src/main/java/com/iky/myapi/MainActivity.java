@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
             public void aksiKlik(int position) {
                 //cara untuk berpindah halaman msinactivity.this (this karena sedang berjalan dan , untuk tempat tujuan
                 Intent intent = new Intent(MainActivity.this,DetailActivity.class);
+                //untuk mengiim data berdasarkan id
+                intent.putExtra("idPlayer",sports.get(position).getId_player());
                 startActivity(intent);
 
             }
