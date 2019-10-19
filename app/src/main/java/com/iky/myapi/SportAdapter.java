@@ -16,8 +16,15 @@ import java.util.ArrayList;
 
 public class SportAdapter extends RecyclerView.Adapter<SportAdapter.ViewHolder> {
 
+    //atribute
     private Context mcontext;
     private ArrayList<Sport>sports;
+    private OnClickListener listener;
+
+    public void setListener(OnClickListener listener) {
+        this.listener = listener;
+
+    }
 
     //yang ada di dalam kurung itu parameter kenapa sport tidak diberi parameter karena ambil dta di internet dan data di android masih kosong
     public SportAdapter(Context mcontext) {
@@ -63,6 +70,15 @@ public class SportAdapter extends RecyclerView.Adapter<SportAdapter.ViewHolder> 
             imageView = itemView.findViewById(R.id.gambar);
             txtName = itemView.findViewById(R.id.name);
             txtNationality = itemView.findViewById(R.id.Nationality);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(listener != null){
+                        listener.aksiKlik(getAdapterPosition());
+
+                    }
+                }
+            });
         }
     }
 }

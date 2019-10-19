@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.android.volley.Request;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 (this,LinearLayoutManager.HORIZONTAL,false);
 
         GridLayoutManager gridLayoutManager =
-                new GridLayoutManager(this,2);
+                new GridLayoutManager(this,1);
 
         StaggeredGridLayoutManager lm3  = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
 
@@ -47,6 +48,16 @@ public class MainActivity extends AppCompatActivity {
         rv_sports.setLayoutManager(gridLayoutManager);
         rv_sports.setAdapter(adapter);
         rv_sports.addItemDecoration(divider);
+
+        adapter.setListener(new OnClickListener() {
+            @Override
+            public void aksiKlik(int position) {
+                //cara untuk berpindah halaman msinactivity.this (this karena sedang berjalan dan , untuk tempat tujuan
+                Intent intent = new Intent(MainActivity.this,DetailActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
     public void ambilData(){
